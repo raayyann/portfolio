@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="bg-pallete-4 absolute -z-10 h-screen w-screen" />
+        <div className="overflow-hidden ff-mono">{children}</div>
+      </body>
     </html>
   );
 }
