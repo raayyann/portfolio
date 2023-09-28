@@ -94,7 +94,8 @@ export default function Home() {
               className="bg-green-500 w-auto px-3"
               href="https://open.spotify.com/artist/6zyZW3ipwnRo0fW2tDn9d0"
             >
-              <FaSpotify /> <span className="ml-1">Artist</span>
+              <FaSpotify />{" "}
+              <span className="ml-1 font-semibold font-sans">Artist</span>
             </LinkButton>
           </div>
         </div>

@@ -12,19 +12,16 @@ export default function Wrapper({
   children: React.ReactNode;
 }) {
   const [o, setOpacity] = opacity;
-  const [d, setDelay] = useState(delay);
 
   useEffect(() => {
-    setOpacity(1);
-    console.log(d);
     setTimeout(() => {
-      setDelay(0);
-    }, d);
+      setOpacity(1);
+    }, delay);
   }, []);
 
   return (
     <div
-      className={`${className} opacity-0 transition-opacity delay-${d} duration-1000 ease-in-out`}
+      className={`${className} opacity-0 transition-opacity duration-1000 ease-in-out container mx-auto`}
       style={{ opacity: o }}
     >
       {children}
