@@ -1,58 +1,63 @@
 "use client";
-import { useEffect, useState } from "react";
-import BackgroundParticle from "./components/BackgroundParticle";
+import { useState } from "react";
+import BackgroundParticle from "../components/BackgroundParticle";
+import Wrapper from "@/components/Wrapper";
+import Button from "@/components/Button";
 
 export default function Home() {
-  const [opacity, setOpacity] = useState(0);
-  const [delay, setDelay] = useState(700);
-  const [disabled, setDisabled] = useState(false);
-
-  useEffect(() => {
-    setOpacity(1);
-    setTimeout(() => {
-      setDelay(0);
-    }, 100);
-  }, []);
+  const opacity = useState(0);
 
   return (
-    <div
-      className={`flex opacity-0 transition-opacity delay-${delay} duration-1000 ease-in-out`}
-      style={{ opacity }}
-    >
+    <Wrapper className="flex" delay={1000} opacity={opacity}>
       <BackgroundParticle />
-      <div className="mx-auto flex h-screen items-center p-5">
+      <div className="mx-auto flex h-screen items-center">
         <div>
           <h3 className="text-3xl text-pallete-2">hello! my name is</h3>
-          <h1 className="text-6xl font-bold text-pallete-1">rayyan muhammad</h1>
-          <div className="flex justify-center">
+          <h1 className="text-6xl font-bold text-pallete-1">Rayyan Muhammad</h1>
+          <div className="shadow-lg p-5 rounded-xl bg-pallete-1 text-pallete-4 mt-5">
+            <p className="text-xl ff-mono text-center font-bold">
+              send me an anonymous message :3
+            </p>
+            <input
+              type="text"
+              name="message"
+              className="w-full ff-mono bg-slate-100 border border-pallete-2 p-2 py-3 rounded-md mt-3 outline-none"
+              autoComplete="off"
+              placeholder="write here"
+              required
+            />
             <button
+              type="button"
+              className="bg-pallete-4 ff-mono p-1 w-full rounded-md text-pallete-1 shadow-md mt-3 hover:opacity-90"
+            >
+              submit
+            </button>
+          </div>
+          <div className="flex justify-center">
+            <Button
               className="px-3 py-2 mx-1 bg-pallete-3 rounded-full text-pallete-1 mt-5 hover:opacity-75"
-              disabled={disabled}
-              onClick={() => {
-                setDisabled(true);
-                setOpacity(0);
-              }}
+              href="/projects"
+              opacity={opacity}
             >
               projects
-            </button>
-            <button
+            </Button>
+            <Button
               className="px-3 py-2 mx-2 bg-pallete-3 rounded-full text-pallete-1 mt-5 hover:opacity-75"
-              disabled={disabled}
+              href="/aboutme"
+              opacity={opacity}
             >
               about me
-            </button>
-            <button
+            </Button>
+            <Button
               className="px-3 py-2 mx-2 bg-pallete-3 rounded-full text-pallete-1 mt-5 hover:opacity-75"
-              disabled={disabled}
+              href="contact"
+              opacity={opacity}
             >
               contact
-            </button>
+            </Button>
           </div>
         </div>
       </div>
-      {/* <div className="mx-auto flex h-screen w-screen p-5 bg-pallete-4">
-        <h1 className="text-3xl font-bold text-pallete-1">Projects</h1>
-      </div> */}
-    </div>
+    </Wrapper>
   );
 }
