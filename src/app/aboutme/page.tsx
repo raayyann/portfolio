@@ -15,18 +15,8 @@ export default function Projects() {
       >
         &lt; Back
       </Button>
-      <h1 className="text-4xl font-bold text-pallete-1">Projects</h1>
-      <p className="mt-2 text-pallete-2">
-        i don't have any big projects yet but just take a look at my{" "}
-        <a
-          href="https://github.com/raayyann/"
-          target="_blank"
-          className="border-b"
-        >
-          github
-        </a>{" "}
-        :) stay tuned!
-      </p>
+      <h1 className="text-4xl font-bold text-pallete-1">About Me</h1>
+      <p className="mt-2 text-pallete-2">malas nulis :l liat nanti</p>
     </Wrapper>
   );
 }

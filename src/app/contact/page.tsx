@@ -1,5 +1,6 @@
 "use client";
 import Button from "@/components/Button";
+import Links from "@/components/Links";
 import Wrapper from "@/components/Wrapper";
 import { useState } from "react";
 
@@ -15,18 +16,12 @@ export default function Projects() {
       >
         &lt; Back
       </Button>
-      <h1 className="text-4xl font-bold text-pallete-1">Projects</h1>
-      <p className="mt-2 text-pallete-2">
-        i don't have any big projects yet but just take a look at my{" "}
-        <a
-          href="https://github.com/raayyann/"
-          target="_blank"
-          className="border-b"
-        >
-          github
-        </a>{" "}
-        :) stay tuned!
-      </p>
+      <h1 className="text-4xl font-bold text-pallete-1">Contact Me</h1>
+      <p className="mt-5 text-pallete-1 text-xl font-bold">Contact</p>
+      <a className="text-pallete-2" href="mailto:rayyan@rayy.my.id">
+        rayyan@rayy.my.id
+      </a>
+      <Links className="mt-3" />
     </Wrapper>
   );
 }
