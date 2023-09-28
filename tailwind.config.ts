@@ -7,13 +7,13 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      "pallete-4": "#27374D",
-      "pallete-3": "#526D82",
-      "pallete-2": "#9DB2BF",
-      "pallete-1": "#DDE6ED",
-    },
     extend: {
+      colors: {
+        "pallete-4": "#27374D",
+        "pallete-3": "#526D82",
+        "pallete-2": "#9DB2BF",
+        "pallete-1": "#DDE6ED",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
