@@ -18,14 +18,13 @@ export async function POST(req: Request) {
 
   try {
     await db();
+    await Message.create({ ip, ua, message });
   } catch (err) {
     return res.json(
       { success: false, message: "Something went wrong!" },
       { status: 500 }
     );
   }
-
-  await Message.create({ ip, ua, message });
 
   return res.json({ success: true });
 }
