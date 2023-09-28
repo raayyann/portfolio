@@ -51,35 +51,38 @@ export default function Home() {
             <LinkButton
               className="bg-pink-500"
               href="https://www.instagram.com/mengrayyy/"
-              children={<FaInstagram />}
+              icon={<FaInstagram />}
             />
             <LinkButton
               className="bg-neutral-900"
               href="https://twitter.com/ryrysigitaris"
-              children={<FaXTwitter />}
+              icon={<FaXTwitter />}
             />
             <LinkButton
               className="bg-blue-500"
               href="https://discord.com/users/385949371331641353"
-              children={<FaDiscord />}
+              icon={<FaDiscord />}
             />
             <LinkButton
               className="bg-neutral-900"
               href="https://github.com/raayyann/"
-              children={<FaGithub />}
+              icon={<FaGithub />}
             />
             <LinkButton
               className="bg-green-500"
               href="https://open.spotify.com/user/31grupln6turgpvuodsxxo6hmbba"
-              children={<FaSpotify />}
+              icon={<FaSpotify />}
             />
             <LinkButton
               className="bg-green-500 w-auto px-3"
               href="https://open.spotify.com/artist/6zyZW3ipwnRo0fW2tDn9d0"
-            >
-              <FaSpotify />{" "}
-              <span className="ml-1 font-semibold font-sans">Artist</span>
-            </LinkButton>
+              icon={
+                <>
+                  <FaSpotify />{" "}
+                  <span className="ml-1 font-semibold font-sans">Artist</span>
+                </>
+              }
+            ></LinkButton>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function Wrapper({
     setTimeout(() => {
       setOpacity(1);
     }, delay);
-  }, []);
+  }, [delay, setOpacity]);
 
   return (
     <div

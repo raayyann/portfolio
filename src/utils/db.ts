@@ -1,3 +1,5 @@
 import mongoose from "mongoose";
 
-export default async () => mongoose.connect(process.env.MONGO_URI as string);
+const db = async () => mongoose.connect(process.env.MONGO_URI as string);
+
+export default db;
