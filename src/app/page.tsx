@@ -4,6 +4,7 @@ import BackgroundParticle from "../components/BackgroundParticle";
 import Wrapper from "@/components/Wrapper";
 import Button from "@/components/Button";
 import LinkButton from "@/components/LinkButton";
+import MessageBox from "@/components/MessageBox";
 import {
   FaDiscord,
   FaGithub,
@@ -22,25 +23,7 @@ export default function Home() {
         <div>
           <h3 className="text-3xl text-pallete-2">hello! my name is</h3>
           <h1 className="text-6xl font-bold text-pallete-1">Rayyan Muhammad</h1>
-          <div className="shadow-lg p-5 rounded-xl bg-pallete-1 text-pallete-4 mt-5">
-            <p className="text-xl ff-mono text-center font-bold">
-              send me an anonymous message :3
-            </p>
-            <input
-              type="text"
-              name="message"
-              className="w-full ff-mono bg-slate-100 border border-pallete-2 p-2 py-3 rounded-md mt-3 outline-none"
-              autoComplete="off"
-              placeholder="write here"
-              required
-            />
-            <button
-              type="button"
-              className="bg-pallete-4 ff-mono p-1 w-full rounded-md text-pallete-1 shadow-md mt-3 hover:opacity-75"
-            >
-              submit
-            </button>
-          </div>
+          <MessageBox />
           <div className="flex justify-center mt-5">
             <Button
               className="px-3 py-2 mx-1 bg-pallete-3 rounded-full text-pallete-1 hover:opacity-75"
