@@ -8,11 +8,10 @@ export default function MessageBox() {
 
   const handleSubmit = async () => {
     setLoading(true);
-    const ip = (await (await fetch("http://ip-api.com/json")).json()).query;
+    const ip = (await (await fetch("https://api64.ipify.org?format=json")).json()).ip;
     const res = await fetch("/api/message", {
       method: "POST",
       body: JSON.stringify({ ip, message }),
-      referrerPolicy: "unsafe-url",
     });
     if (res.status == 200) setSent(true);
     else {
