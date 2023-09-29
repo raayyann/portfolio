@@ -3,15 +3,7 @@ import { useState } from "react";
 import BackgroundParticle from "../components/BackgroundParticle";
 import Wrapper from "@/components/Wrapper";
 import Button from "@/components/Button";
-import LinkButton from "@/components/LinkButton";
 import MessageBox from "@/components/MessageBox";
-import {
-  FaDiscord,
-  FaGithub,
-  FaInstagram,
-  FaSpotify,
-  FaXTwitter,
-} from "react-icons/fa6";
 import Links from "@/components/Links";
 
 export default function Home() {
