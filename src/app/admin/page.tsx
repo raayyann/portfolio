@@ -7,7 +7,7 @@ async function getData() {
 
   try {
     await db();
-    messages = await Message.find();
+    messages = await Message.find().sort({ createdAt: -1 });
   } catch (err) {
     return null;
   }
