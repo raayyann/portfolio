@@ -1,6 +1,5 @@
 import Message from "@/models/Message";
 import db from "@/utils/db";
-import Link from "next/link";
 
 async function getData() {
   let messages;
@@ -15,13 +14,14 @@ async function getData() {
   return messages;
 }
 
+export const dynamic = "force-dynamic";
 export default async function Page() {
   const data = await getData();
 
   return data == null ? (
     <h1 className="text-3xl font-bold">Failed to fetch messages</h1>
   ) : (
-    <div className="text-white p-5">
+    <div className="bg-pallete-4 text-white p-5">
       <h1 className="text-3xl font-bold">Messages</h1>
       {data.map((message) => (
         <div
@@ -36,18 +36,18 @@ export default async function Page() {
           <p className="text-xl my-3">{message.message}</p>
           <p className="text-xs">{message.createdAt.toString()}</p>
           <br />
-          <Link
+          <a
             href={"admin/delete?id=" + message.id}
             className="bg-red-500 rounded-lg py-2 px-3 mr-1 text-white mt-3"
           >
             Delete
-          </Link>
-          <Link
+          </a>
+          <a
             href={"admin/answer?message=" + message.message}
             className="bg-blue-600 rounded-lg py-2 px-3 mr-1 text-white mt-3"
           >
             Answer
-          </Link>
+          </a>
         </div>
       ))}
     </div>
