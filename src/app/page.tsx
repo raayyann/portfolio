@@ -5,6 +5,7 @@ import Wrapper from "@/components/Wrapper";
 import Button from "@/components/Button";
 import MessageBox from "@/components/MessageBox";
 import Links from "@/components/Links";
+import Donate from "@/components/Donate";
 
 export default function Home() {
   const opacity = useState(0);
@@ -40,6 +41,7 @@ export default function Home() {
               contact
             </Button>
           </div>
+          <Donate />
           <Links className="justify-center mt-5" />
         </div>
       </div>
