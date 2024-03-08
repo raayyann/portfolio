@@ -20,7 +20,7 @@ export default function Donate() {
           setOpen(true);
         }}
       >
-        💸 buy me a candy 🍬
+        💸 buy me a ice tea 🍸
       </button>
       {open && (
         <div className="block fixed top-0 left-0 w-full h-full z-40">
